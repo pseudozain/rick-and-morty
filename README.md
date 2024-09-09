@@ -1,6 +1,19 @@
 # Rick & Morty
 Rick & Morty is an iOS application built using Swift that allows users to view, filter, and explore a list of characters. The app is structured around a clean, maintainable, and testable architecture, leveraging MVVM (Model-View-ViewModel) design patterns to ensure separation of concerns, reusability, and scalability. The app interacts with a [Rick & Morty API](https://rickandmortyapi.com/documentation/) to fetch character data and displays it in a user-friendly format.
 
+<p align="center">
+  <img 
+    src="/Screenshots/sc1.png"
+    width="230" 
+    title="Characters"
+    >
+  <img
+    src="/Screenshots/sc2.png"
+    width="230"
+    title="Character details"
+    >
+</p>
+
 ### Key Features:
 - Character List: Displays a paginated list of characters retrieved from the server.
 - Character Filters: Allows users to filter characters by their status (Alive, Dead, Unknown) using a custom header.
