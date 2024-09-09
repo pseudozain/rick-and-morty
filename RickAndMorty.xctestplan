@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "DE812C4C-44D3-4958-9B34-7947468E76E2",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/Extensions",
+        "identifier" : "ExtensionsTests",
+        "name" : "ExtensionsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:RickAndMorty.xcodeproj",
+        "identifier" : "BF41C97F2C8D6828004D6CB4",
+        "name" : "RickAndMortyTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Networking",
+        "identifier" : "NetworkingTests",
+        "name" : "NetworkingTests"
+      }
+    }
+  ],
+  "version" : 1
+}
