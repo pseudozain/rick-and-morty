@@ -45,7 +45,7 @@ The Networking module is responsible for handling network requests. It abstracts
 The Extensions module includes various utility extensions and helper functions that enhance the functionality of standard Swift and UIKit components. This module helps keep the main project clean and maintainable by providing reusable components and common functionalities.
 
 ## How to run
-1. Open the Project: Launch Xcode and open the project file located at [RickAndMorty/RickAndMorty.xcodeproj](RickAndMorty/RickAndMorty.xcodeproj).
+1. Open the Project: Launch Xcode and open the project file located at [RickAndMorty/RickAndMorty.xcodeproj](RickAndMorty/).
 2. Resolve Dependencies: Allow Xcode to resolve all dependencies managed by Swift Package Manager (SPM). This process may take a few moments.
 3. Select Rick&Morty scheme from the available schemes.
 4. Run the App: Select an iPhone Simulator with iOS 15.0 or later from the target device list and click the "Run" button in Xcode to build and launch the app.
