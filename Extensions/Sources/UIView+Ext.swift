@@ -5,8 +5,8 @@
 //  Created by Zain ul Abe Din on 08/09/2024.
 //
 
-import Foundation
 import UIKit
+import SwiftUI
 
 public extension UIView {    
     func embedView(_ subview: UIView, insets: UIEdgeInsets = .zero) {
@@ -17,6 +17,14 @@ public extension UIView {
             subview.leadingAnchor.constraint(equalTo: leadingAnchor, constant: insets.left),
             subview.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -insets.bottom),
             subview.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -insets.right)])
+    }
+    
+    func host<Content: View>(_ content: Content) {
+        subviews.forEach { $0.removeFromSuperview() }
+        let hostingController = UIHostingController(rootView: content)
+        hostingController.view.backgroundColor = .clear
+        embedView(hostingController.view)
+        superview?.layoutIfNeeded()
     }
 }
 

@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import SwiftUI
+import UIKit
 
 final class UIViewExtTests: XCTestCase {
     // MARK: - Properties
@@ -53,4 +55,29 @@ final class UIViewExtTests: XCTestCase {
         XCTAssertEqual(view.frame, sut.bounds)
     }
     
+    func testHost_whenNoSubviewExists_thenShouldAddSwiftUIViewAsSubview() {
+        // given
+        let viewToHost = Text("Hello, World!")
+        var containerView = UIView()
+        
+        // when
+        containerView.host(viewToHost)
+        
+        // then
+        XCTAssertEqual(containerView.subviews.count, 1)
+    }
+    
+    func testHost_whenSubviewExists_thenRemovesPreviousSubviews() {
+        // given
+        var containerView = UIView()
+        let previousSubview = UIView()
+        containerView.addSubview(previousSubview)
+        let viewToHost = Text("Hello, World!")
+        
+        // when
+        containerView.host(viewToHost)
+        
+        // then
+        XCTAssertFalse(containerView.subviews.contains(previousSubview))
+    }
 }
